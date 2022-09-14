@@ -32,6 +32,17 @@
 \bigbreak
 
 \begin{exercise}\textbf{Exercise 1.4.1}
+	The \textit{only if} assertion is more than clear, we procede with the \textit{if} one. We base the proof on the observation that if $h$ is an even function then $x \in h^{-1}(A)$ implies $-x \in h^{-1}(A)$ for any $x \in \mathbb{R}$ and any $A \subset \mathbb{R}$. With this in mind, it suffices to show that $\mathcal{A} = \{ A \in \mathcal{B}(\mathbb{R}) : x \in A \implies -x \in A\} \subset \sigma(f)$, this is what we will do.
+
+	More specific, we will show that for all $B \in \mathcal{B(\mathbb{R})}$ with $B \subset \mathbb{R}_{\geq 0}$, $B \cup -B \in \sigma(f)$. To do this observe that $\mathcal{C} = \{ (-\infty, -a] \cup [a, \infty): a \in \mathbb{R}_{\geq 0}\} \subset \sigma(f)$ and that by exchanging the generator with the trace we get
+	\[
+	\begin{align}
+		\mathcal{B}(\mathbb{R})\vert_{\mathbb{R}_{\geq 0}} &= \sigma(\{[a, \infty) : a \in \mathbb{R}\})\vert_{\mathbb{R}_{\geq 0}} \\
+								   &= \sigma(\{[a, \infty) : a \in \mathbb{R}_{\geq 0}\}) \\
+								   &= \sigma(\mathcal{C})\vert_{\mathbb{R}_{\geq 0}}
+	\end{align}
+	\]
+	The remaining steps are simple and left to the reader.
 
 \end{exericse}
 
@@ -47,7 +58,7 @@
 			|x| & otherwise
 		\end{cases*}
 	\]
-	Now, $f$ and $g$ only differ in $\{1,-1\}$ which clearly has null measure. However, we have that $2 \in g^{-1}(1)$ and $-2 \notin g^{-1}(1)$ which implies that the set $g^{-1}(1)$ cannot be measurable (this assertion can be deduced from the solution of \textbf{Ex 1.4.1}) which conclues the proof.
+	Now, $f$ and $g$ only differ in $\{1,-1\}$ which clearly has null measure. However, we have that $1 \in g^{-1}(2)$ and $-1 \notin g^{-1}(2)$ which implies that the set $g^{-1}(2)$ cannot be measurable (this assertion can be deduced from the solution of \textbf{Ex 1.4.1}) which conclues the proof.
 
 \end{exericse}
 
