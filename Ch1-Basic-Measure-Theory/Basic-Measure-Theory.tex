@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+\author{Salvador Castagnino \\ scastagnino@itba.edu.ar}
+\date{} 
+\title{Chapter 1 - Basic Measure Theory}
+
+\begin{document}
+
+\maketitle 
+
+\section*{Exercise Solutions}
+
+\begin{exercise}\textbf{Exercise 1.1.3}
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.3.1}
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.3.3}
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.4.1}
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.4.2}
+	Let $f$ be as in \textbf{Ex 1.4.1} and let $(\mathbb{R}, \sigma(f), \lambda)$ be our measure space, we define the function $g: \mathbb{R} \rightarrow \mathbb{R}$ such that
+	\[
+		g(x) = 
+		\begin{cases*}
+			2 & if $x=1$ \\
+			-2 & if $x=-1$ \\
+			|x| & otherwise
+		\end{cases*}
+	\]
+	Now, $f$ and $g$ only differ in $\{1,-1\}$ which clearly has null measure. However, we have that $2 \in g^{-1}(1)$ and $-2 \notin g^{-1}(1)$ which implies that the set $g^{-1}(1)$ cannot be measurable (this assertion can be deduced from the solution of \textbf{Ex 1.4.1}) which conclues the proof.
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.4.3}
+	The differentiability of $f$ implies it's continuity which in turn implies it's measurability. Now define the sequence of functions
+	\[
+		f_n (c)= \frac{f(c+\frac{1}{n}) - f(c)}{(c + \frac{1}{n}) - c}
+	\]
+	It is easy to verify that these are measurable functions and given the existance of the limit of the difference quotient of $f$ we have $f'(c) = \limsup_{n\rightarrow\infty} f_n(c)$ for all $c \in \mathbb{R}$ which implies the measurability of $f'$ and concludes the proof.
+
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.4.5}
+
+\end{exericse}
+
+\section*{Useful Properties}
+
+
+\end{document}
