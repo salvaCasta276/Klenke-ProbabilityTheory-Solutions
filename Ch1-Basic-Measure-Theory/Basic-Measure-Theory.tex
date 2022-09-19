@@ -14,6 +14,23 @@
 \section*{Exercise Solutions}
 
 \begin{exercise}\textbf{Exercise 1.1.3}
+	Let $\epsilon, \delta> 0$ we define 
+	\[
+		U_{\epsilon,\delta} = \{x \in \Omega_1 : \exists\ y, z \in B(x,\delta)\ \text{with}\ d_2(f(y),f(z)) > \epsilon \}
+	\]
+	Let's see that these sets are open for all $\epsilon$ and $\delta$ and that $U_f$ can be generated from them.
+	
+	Let $\epsilon, \delta > 0$ we take $x \in U_{\epsilon, \delta}$ and define $m = \delta - \max\{d_1(x,y),d_1(x,z)\}$, we want to see that $B(x,m) \subset U_{\epsilon, \delta}$. If $w \in B(x,m)$ then
+	\[	
+		d_1(w,y) \leq d_1(w,x) + d_1(x,y) < m + d_1(x,y) \leq \delta
+	\]
+	This proves that $y \in B(w,\delta)$ and the same reasoning can be applied to prove that $z \in B(w,\delta)$. Combining both statementes we get that $w \in U_{\epsilon, \delta}.
+	
+	Now, observe that $x \in \Omega_1$ is a point of discontinuity of $f$ if and only if there exists an $\epsilon > 0$ such that for all $\delta > 0$ we have that $f(B(x,\delta)) \not\subset B(f(x),\epsilon)$. Expressing this with set operations we get
+	\[
+		U_f = \bigcup_{n=1}^{\infty} \bigcap_{m=1}^{\infty} U_{\frac{1}{n},\frac{1}{m}}
+	\]
+	This proves what we wanted.
 
 \end{exericse}
 
