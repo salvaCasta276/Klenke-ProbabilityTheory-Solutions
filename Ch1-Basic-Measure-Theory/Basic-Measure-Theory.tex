@@ -97,6 +97,49 @@
 
 \end{exericse}
 
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.5.2}
+	(i) Let $X \sim \mathcal{N}_{\mu,\sigma^2}$ then we have the \textit{normal distribution} as measure with continous density function $f$. We define $\varphi:\mathbb{R} \rightarrow \mathbb{R}$ to be the function $\varphi (x) = ax+b$ with $a \neq 0$ which is clearly a continously differentiale bijection.
+
+	Now, \textbf{Thm 1.101} states the density function of $\mathcal{N}_{\mu, \sigma^2} \circ \varphi^{-1}$ to be
+	\[
+		f_{\varphi}(x) = \frac{f(\frac{x-b}{a})}{|a|}=\frac{1}{\sqrt{2\pi(\sigma a)^2}}
+		\exp\left\{ - \frac{(x-(a\mu +b))^2}{2(\sigma a)^2} \right\}
+	\]
+	Given the equality of \textit{distribution functions} we have that $\mathcal{N}_{\mu,\sigma^2} \circ \varphi^{-1} = \mathcal{N}_{a\mu +b,(\sigma a)^2}$ and we know that $aX+b \sim \mathcal{N}_{\mu,\sigma^2} \circ \varphi^{-1}$ which concludes the proof.
+
+	\bigbreak
+
+	(ii) Let $X \sim \exp_\theta$ then we have the \textit{exponential distribution} as measure with continous density function $f$. We define $\varphi : \mathbb{R} \rightarrow \mathbb{R}$ to be the function $\varphi(x) = ax$ with $a > 0$ which is clearly a continously differentiable bijection. 
+
+	Now, \textbf{Thm 1.101} states the density function of $\exp_\theta \circ \varphi^{-1}$ to be
+	\[
+		f_{\varphi}(x) = \frac{f(\frac{x}{a})}{a}=\frac{\theta}{a} \exp \left\{ - \frac{\theta}{a} x \right\}
+	\]
+	Given the equality of \textit{distribution functions} we have that $\exp_\theta \circ \varphi^{-1} = \exp_{frac{\theta}{a}$ and we know that $aX \sim \exp_\theta \circ \varphi^{-1}$ which concludes the proof.
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.5.3}
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.5.4}
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.5.5}
+
+\end{exericse}
+
+\bigbreak
+
 \section*{Useful Properties}
 
 
