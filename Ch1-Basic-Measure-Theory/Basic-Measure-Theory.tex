@@ -100,6 +100,12 @@
 \bigbreak
 
 \begin{exercise}\textbf{Exercise 1.5.2}
+
+\end{exericse}
+
+\bigbreak
+
+\begin{exercise}\textbf{Exercise 1.5.3}
 	(i) Let $X \sim \mathcal{N}_{\mu,\sigma^2}$ then we have the \textit{normal distribution} as measure with continous density function $f$. We define $\varphi:\mathbb{R} \rightarrow \mathbb{R}$ to be the function $\varphi (x) = ax+b$ with $a \neq 0$ which is clearly a continously differentiale bijection.
 
 	Now, \textbf{Thm 1.101} states the density function of $\mathcal{N}_{\mu, \sigma^2} \circ \varphi^{-1}$ to be
@@ -117,19 +123,27 @@
 	\[
 		f_{\varphi}(x) = \frac{f(\frac{x}{a})}{a}=\frac{\theta}{a} \exp \left\{ - \frac{\theta}{a} x \right\}
 	\]
-	Given the equality of \textit{distribution functions} we have that $\exp_\theta \circ \varphi^{-1} = \exp_{frac{\theta}{a}$ and we know that $aX \sim \exp_\theta \circ \varphi^{-1}$ which concludes the proof.
-\end{exericse}
-
-\bigbreak
-
-\begin{exercise}\textbf{Exercise 1.5.3}
-
+	Given the equality of \textit{distribution functions} we have that $\exp_\theta \circ \varphi^{-1} = \exp_{\frac{\theta}{a}$ and we know that $aX \sim \exp_\theta \circ \varphi^{-1}$ which concludes the proof.
 \end{exericse}
 
 \bigbreak
 
 \begin{exercise}\textbf{Exercise 1.5.4}
+	Given that the notation used in the formulation of the exercise is not completely clear I must clarify that I will be using the distribution function as $F(x) = \mu((-\infty, x])$ with $x \in \mathbb{R}^2$ using the partial order for $\mathbb{R}^2$ defined previously in the book.
 
+	We start with the \textit{only if} statement. It is easy to deduce the monotonicity of $F$ from that of the measure, we prove it's right continuity. Let $\{(x_n,y_n)\}_{n \in \mathbb{N}}$ be a sequence in $\mathbb{R}^2$ which converges to $(x,y)$, observe that if the sequence is decreasing we can directly apply the continuity of the measure. However if the sequence isn't decresing, this can't be done directly. 
+
+	With this in mind our problem becomes to find a decreasing sequence such that it's continuity implies that of the original sequence. Define $N_m \in \mathbb{N}$ such that for all $n \ge N_m$ we have that $\| (x_n,y_n)-(x,y) \| < \frac{1}{m}$ and let $a_m = \sup_{n \ge N_m} x_n$ and $b_m = \sup_{n \ge N_m} y_n$.
+
+	Firstly we have that $(x_n,y_n) \le (a_m,b_m)$ for all $n \ge N_m$ and thus 
+	\[
+		(-\infty, (x_n,y_n)] \subset (-\infty, (a_n,b_n)]
+	\]
+	Secondly, we have that $x \le a_m \le x+\frac{1}{m}$ and $y \le b_m \le y+\frac{1}{m}$ which implies that 
+	\[
+		\bigcap_{m=1}^{\infty} (-\infty, (a_m,b_m)] = (-\infty,(x,y)]
+	\]
+	These two last statements prove what we wanted. Point \textit{(ii)} can be proved using the same idea. Observe that we talk about the \textit{right continuity} and not the \textit{left continuity} given that a union of sets of the form $(-\infty, x_n]$ may not contain the point $\sup_{n \ge 1} x_n$ while it's intersection will always contain the point $\inf_{n \ge 1} x_n$.
 \end{exericse}
 
 \bigbreak
