@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{mathtools}
+\usepackage{algpseudocode}
 
 \author{Salvador Castagnino \\ scastagnino@itba.edu.ar}
 \date{} 
@@ -12,6 +13,48 @@
 \maketitle 
 
 \section*{Exercise Solutions}
+
+\begin{exercise}\textbf{Theorem 2.5}
+
+	The only implication we will be proving is \textit{(ii)} $\implies$ \textit{(iii)}, the rest are obvious. Let $\{\beta_i\}_{i \in I}$ be an arbitrary binary sequence and let $\{\alpha_i\}_{i \in I}$ be the binary sequence which makes the class of events independent, let $J \subset I$ be finite (in particular suppose that $J = \{1,...,n\}$) and let $L \subset J$ be the set such that $i \in L \iff \alpha_i \neq \beta_i$. We define the following algorithm
+
+	\bigbreak
+
+	\begin{algorithmic}
+		\State $\mathcal{B}=\left\{C_i\right\}_{1 \le i \le n}$
+		\For{$1 \le i \le n$}
+		\State $C_i = B_i^{\alpha_i}$
+		\EndFor
+		\For{$1 \le i \le n$}
+		\If{$i \in L$}
+		\State $C_i = C_i^c$
+		\EndIf
+		\EndFor
+		\State \textbf{return} $\mathcal{B}$
+	\end{algorithmic}
+
+	\bigbreak
+
+	We claim that the follwing two assertions are invariants of the algorithm
+	\begin{itemize}
+		\item The family of events $\mathcal{B}$ is independent
+		\item At the end of the $i$-th iteration we have that $\left\{C_j\right\}_{1 \le j \le i} = \left\{B_j^{\beta_j}\right\}_{1 \le j \le i}$
+	\end{itemize}
+
+	Before the first iteration, $\mathcal{B}$ is independent by hypothesis and $1-1=0$, so both assertions hold.
+
+	Assume that both assertions hold at the beginning of iteration i, we prove that they hold at it's end. If $i \not\in L$, $\mathcal{B}$ is not modified and $C_i = B_i^{\beta_i}$, thus both properties hold. If $i \in L$, clearly the second assertin holds as we now have $C_i = B_i^{\beta_i}$, we prove that the first assertion holds through the following derivation
+	\[
+		\mathbb{P}\left[\bigcap_{j = 1}^n C_j \right] = \mathbb{P}\left[C_i\right] \prod_{1 \le j \neq i \le n} \mathbb{P}\left[C_j\right] = 
+		\mathbb{P}\left[C_i\right] \mathbb{P}\left[\bigcap_{1 \le j \neq i \le n}C_j\right]
+	\]
+	Using the observation stated above the theorem, we have that the event $C_i^c$ and the intersection of all the other events in $\mathcal{B}$ are independent which proves that the first assertion holds after the $i$-th iteration is completed.
+
+	Looking at the last iteration of the algorithm and putting together these two invariant we deduce that $\left\{B_i^{\beta_i}\right\}_{i \in J}$ is independent, as we wanted.
+
+
+
+\end{exercise}
 
 \bigbreak
 
