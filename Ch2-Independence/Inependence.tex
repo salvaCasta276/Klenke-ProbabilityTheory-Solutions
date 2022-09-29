@@ -35,7 +35,7 @@
 
 	\bigbreak
 
-	We claim that the follwing two assertions are invariants of the algorithm
+	We claim that the follwing two assertions are invariants of the second loop
 	\begin{itemize}
 		\item The family of events $\mathcal{B}$ is independent
 		\item At the end of the $i$-th iteration we have that $\left\{C_j\right\}_{1 \le j \le i} = \left\{B_j^{\beta_j}\right\}_{1 \le j \le i}$
@@ -43,7 +43,7 @@
 
 	Before the first iteration, $\mathcal{B}$ is independent by hypothesis and $1-1=0$, so both assertions hold.
 
-	Assume that both assertions hold at the beginning of iteration i, we prove that they hold at it's end. If $i \not\in L$, $\mathcal{B}$ is not modified and $C_i = B_i^{\beta_i}$, thus both properties hold. If $i \in L$, clearly the second assertin holds as we now have $C_i = B_i^{\beta_i}$, we prove that the first assertion holds through the following derivation
+	Assume that both assertions hold at the beginning of iteration i, we prove that they hold at it's end. If $i \not\in L$, $\mathcal{B}$ is not modified and $C_i = B_i^{\beta_i}$, thus both properties hold. If $i \in L$, clearly the second assertin holds as we now have $C_i = B_i^{\beta_i}$. Assume that $C_i$ has not been modified this iteration, we then have
 	\[
 		\mathbb{P}\left[\bigcap_{j = 1}^n C_j \right] = \mathbb{P}\left[C_i\right] \prod_{1 \le j \neq i \le n} \mathbb{P}\left[C_j\right] = 
 		\mathbb{P}\left[C_i\right] \mathbb{P}\left[\bigcap_{1 \le j \neq i \le n}C_j\right]
